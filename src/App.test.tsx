@@ -1,6 +1,4 @@
-import { fireEvent, queryByAttribute, queryByTestId, render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import { isTemplateExpression } from 'typescript';
+import { fireEvent, render, screen } from '@testing-library/react';
 import App from './App';
 
 describe("TEST APP", () => {
@@ -32,6 +30,7 @@ describe("TEST APP", () => {
     fireEvent.click(buttonElement)
 
     expect(screen.getByText(todoText)).toBeInTheDocument()
+    // expect(screen.getByTestId(todoText)).toBeInTheDocument()
   })
 
   test("add multiple todo", () => {
