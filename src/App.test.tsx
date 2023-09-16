@@ -3,43 +3,6 @@ import userEvent from '@testing-library/user-event';
 import { isTemplateExpression } from 'typescript';
 import App from './App';
 
-// describe("TEST APP", () => {
-
-//   test('App component rendered', () => {
-//     render(<App />);
-//     const header = screen.getByTestId(/App/i);
-//     expect(header).toBeInTheDocument();
-//   });
-
-//   test('Can add a task', () => {
-//     render(<App />);
-//     const addBtn = screen.getByTestId("add-btn");
-//     expect(addBtn).toBeInTheDocument();
-//     const inputElem = screen.getByPlaceholderText(/что нужно сделать/i);
-//     expect(inputElem).toBeInTheDocument();
-//     userEvent.type(inputElem, "New task")
-//     expect(inputElem).toHaveValue("New task")
-//     userEvent.click(addBtn)
-//     const newTask = screen.getByTestId("new-task")
-//     expect(newTask).toBeInTheDocument()
-//   });
-
-//   test('Can "complete" task', () => {
-//     const getById = queryByAttribute.bind(null, 'id');
-//     const { container } = render(<App />)
-//     const dom = render(<App />);
-//     // const completeBtn = getById(dom.container, "checkbox-true")
-//     const svgBtn = container.querySelector("[data-testid='checkbox-true']") as HTMLImageElement
-//     // expect(queryByTestId(svgBtn, "checkbox-true")).toBeInTheDocument()
-//     expect(svgBtn.classList.toString()).toContain("checkbox-true");
-
-//   });
-
-//   test('Can delete task', () => {
-
-//   });
-// })
-
 describe("TEST APP", () => {
 
   test("renders heading", () => {
