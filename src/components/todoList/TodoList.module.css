@@ -1,0 +1,75 @@
+.todo {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  min-width: 85%;
+  background-color: white;
+  margin-bottom: 2px;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.deleteButton {
+  font-size: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.buttons:hover {
+  cursor: pointer;
+}
+
+.checkboxPlusTitle {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 15px;
+  font-size: 36px;
+}
+
+.checkboxTrue {
+  color: lightgreen;
+}
+
+.checkboxFalse {
+  color: lightgray;
+}
+
+.doneTrue {
+  text-decoration: line-through;
+  font-weight: 100;
+}
+
+.firstTask {
+  box-shadow: none;
+}
+
+.buttomGrouoButtons {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  min-width: 85%;
+  background-color: white;
+  margin-bottom: 2px;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  padding: 5px 15px;
+  color: grey;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.allDone {
+  color: red;
+}

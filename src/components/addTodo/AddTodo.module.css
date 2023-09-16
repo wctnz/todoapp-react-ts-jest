@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    font-size: 36px;
+    background-color: white;
+    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, .2)
+}
+
+.input {
+    height: 50px;
+    min-width: 84%;
+    border: none
+}
+
+.addButton {
+    cursor: pointer;
+    margin-left: 20px;
+}
