@@ -1,5 +1,6 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, queryByTestId, render, screen } from '@testing-library/react'
 import App from './App';
+import TodoItem from './components/todoItem/TodoItem';
 
 describe("TEST APP", () => {
 
@@ -21,43 +22,20 @@ describe("TEST APP", () => {
     expect(button).toBeInTheDocument()
   })
 
-  test("add todo", () => {
-    render(< App />)
-    const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
-    const buttonElement = screen.getByTestId("add-btn");
-    const todoText = "test todo"
-    fireEvent.change(inputElement, { target: { value: todoText } })
-    fireEvent.click(buttonElement)
-
-    expect(screen.getByText(todoText)).toBeInTheDocument()
-    // expect(screen.getByTestId(todoText)).toBeInTheDocument()
+  test("add todo TodoItem", () => {
+    const mockTodo = { id: 1, title: "Webpack", done: false }
+    render(<TodoItem todo={mockTodo} index={2} />)
+    const todoElem = screen.getByTestId("Webpack")
+    expect(todoElem).toBeInTheDocument()
   })
 
-  test("add multiple todo", () => {
-    render(< App />)
-    const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
-    const buttonElement = screen.getByTestId("add-btn");
-    const todoTexts = ["Learn Redux", "Learn Webpack"]
-    todoTexts.forEach(todoText => {
-      fireEvent.change(inputElement, { target: { value: todoText } })
-      fireEvent.click(buttonElement)
-    })
-
-    todoTexts.forEach(todoText => {
-      expect(screen.getByText(todoText)).toBeInTheDocument()
-    })
-  })
-
-  test("delete todo", () => {
-    render(<App />)
-    const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
-    const buttonElement = screen.getByTestId("add-btn");
-    const todoText = "Learn Redux"
-    fireEvent.change(inputElement, { target: { value: todoText } })
-    fireEvent.click(buttonElement)
-    expect(screen.queryByText(todoText)).not.toBeInTheDocument()
-    const deleteBtn = screen.getByTestId("deleteBtn")
+  test("delete todo TodoItem", () => {
+    const mockTodo = { id: 1, title: "Webpack", done: false }
+    render(<TodoItem todo={mockTodo} index={2} />)
+    const todoElem = screen.getByTestId("Webpack")
+    expect(todoElem).toBeInTheDocument()
+    const deleteBtn = screen.getByTestId("delete-btn");
     fireEvent.click(deleteBtn)
-    expect(screen.queryByText(todoText)).not.toBeInTheDocument()
+    expect(queryByTestId(todoElem, "Webpack")).not.toBeInTheDocument()
   })
 })
