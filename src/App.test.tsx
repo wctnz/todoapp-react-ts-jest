@@ -38,4 +38,45 @@ describe("TEST APP", () => {
     fireEvent.click(deleteBtn)
     expect(queryByTestId(todoElem, "Webpack")).not.toBeInTheDocument()
   })
+
+  // тесты ниже падают. После изменения значения инпута и нажатия на кнопку Добавить, Jest не 
+  // может найти тудушку которая должна появиться. Буду дальше искать почему так
+
+  // test("add todo App", () => {
+// render(< App />)
+// const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
+// const buttonElement = screen.getByTestId("add-btn");
+// const todoText = "test todo"
+// fireEvent.change(inputElement, { target: { value: todoText } })
+// fireEvent.click(buttonElement)
+// expect(screen.getByText(todoText)).toBeInTheDocument()
+// })
+
+// test("add multiple todo", () => {
+// render(< App />)
+// const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
+// const buttonElement = screen.getByTestId("add-btn");
+// const todoTexts = ["Learn Redux", "Learn Webpack"]
+// todoTexts.forEach(todoText => {
+// fireEvent.change(inputElement, { target: { value: todoText } })
+// fireEvent.click(buttonElement)
+// })
+
+// todoTexts.forEach(todoText => {
+// expect(screen.getByText(todoText)).toBeInTheDocument()
+// })
+// })
+
+// test("delete todo", () => {
+// render(<App />)
+// const inputElement = screen.getByPlaceholderText(/что нужно сделать/i);
+// const buttonElement = screen.getByTestId("add-btn");
+// const todoText = "Learn Redux"
+// fireEvent.change(inputElement, { target: { value: todoText } })
+// fireEvent.click(buttonElement)
+// expect(screen.queryByText(todoText)).not.toBeInTheDocument()
+// const deleteBtn = screen.getByTestId("deleteBtn")
+// fireEvent.click(deleteBtn)
+// expect(screen.queryByText(todoText)).not.toBeInTheDocument()
+// })
 })
