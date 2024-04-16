@@ -4,6 +4,7 @@ import { ITodo } from '../../models/models';
 import { TodosContext } from '../context/Context';
 import cl from "./AddTodo.module.css" 
 import { IoIosAddCircleOutline } from 'react-icons/io';
+import addBtnImg from "./../../assets/images/add_btn.png"
 
 
 const AddTodo = () => {
@@ -28,8 +29,11 @@ const AddTodo = () => {
 
     return (
         <div className={ cl.main }>
-            <input data-testid="input-elem" className={ cl.input } placeholder='    Что нужно сделать?' value={ taskTitle } onChange={ handleInputChange }/>
-            <IoIosAddCircleOutline data-testid="add-btn" className={ cl.addButton } onClick={addTodo}></IoIosAddCircleOutline>
+            <input data-testid="input-elem" className={ cl.input } placeholder='Что нужно сделать?' value={ taskTitle } onChange={ handleInputChange }/>
+            {/* <IoIosAddCircleOutline data-testid="add-btn" className={ cl.addButton } onClick={addTodo}></IoIosAddCircleOutline> */}
+            <div>
+                <img src={ addBtnImg } alt="addBtn" data-testid="add-btn" className={ cl.addButton } onClick={addTodo} />
+            </div>
         </div>
     );
 };

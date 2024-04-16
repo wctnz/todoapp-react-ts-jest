@@ -44,7 +44,7 @@ const TodoItem: FC<TodoItemProps> = ({ todo, index }) => {
     }
 
     return (
-        <div className={cl.todo} data-testid={todo.title}>
+        <div className={cl.todo} data-testid={ todo.title }>
             <div>
                 {edit === todo.id ?
                     <div>

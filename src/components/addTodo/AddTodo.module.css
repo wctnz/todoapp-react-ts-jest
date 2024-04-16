@@ -1,19 +1,30 @@
 .main {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2px;
-    font-size: 36px;
-    background-color: white;
-    box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, .2)
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  font-size: 36px;
+  background-color: white;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .input {
-    height: 50px;
-    min-width: 84%;
-    border: none
+  height: 50px;
+  min-width: 75%;
+  border: none;
+  padding-left: 55px;
+}
+
+input::placeholder {
+  font-family: var(--font-option);
+  font-size: 20px;
+  font-style: oblique;
+  color: rgba(0, 0, 0, 0.2)
 }
 
 .addButton {
-    cursor: pointer;
-    margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+  padding-top: 10px;
 }
